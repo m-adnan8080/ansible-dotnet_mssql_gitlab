@@ -1,0 +1,13 @@
+[all]
+iis.local ansible_host=192.168.100.11
+mssql.local ansible_host=192.168.100.12
+gitlab.local ansible_host=192.168.100.13
+
+[db]
+mssql.local
+
+[web]
+iis.local
+
+[git]
+gitlab.local

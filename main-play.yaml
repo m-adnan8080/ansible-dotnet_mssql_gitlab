@@ -1,0 +1,21 @@
+---
+
+- hosts: web
+  become: true
+  vars_files:
+    - vars.yaml
+  roles:
+    - {role: docker, when: CRIO == False and DOCKER == True}
+    - {role: crio, when: CRIO == True and DOCKER == False}
+
+- hosts: db
+  become: true
+  vars_files:
+    - vars.yaml
+  roles:
+    - {role: mssql}
+
+- hosts: git
+  become: true
+  roles:
+    - {role: gitlab}

@@ -1,0 +1,10 @@
+---
+USERNAME: "vagrant"
+
+MSSQL_VERSION: mssql-server-2019
+# Use docker engine to run kubernets containers
+DOCKER: true
+
+# Use cri-o engine to run kubernets containers
+CRIO_VERSION: "1.21"
+CRIO: false
