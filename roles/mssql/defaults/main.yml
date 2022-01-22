@@ -7,3 +7,4 @@ mssql_packages:
   - mssql-server
   - python-pip
   - python-devel
+  - python-pymssql
