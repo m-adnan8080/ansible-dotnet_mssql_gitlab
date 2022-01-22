@@ -4,14 +4,14 @@ end_user_license_aggreement_consent_cli: "YES" # Must be YES or NO in all caps w
 edition: Developer
 
 # For use when creating, importing, or deleting databases
-db_name: testDB
+db_name: tlpscriptanddata
 db_host: 127.0.0.1
 db_port: 1433
 db_user: SA
 db_password: P@ssWORD!
 
-import_file: ~/Documents/centos/Load_DB.sql
-import_file_dest: /tmp/Load_DB.sql
+import_file: tlpscriptanddata.sql
+import_file_dest: /tmp/tlpscriptanddata.sql
 
 #System Config options
 enable_firewall: false

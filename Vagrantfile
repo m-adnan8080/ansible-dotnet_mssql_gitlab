@@ -4,7 +4,7 @@
 cluster = {
   "iis" => { :ip => "192.168.100.11", :mem => 2048, :cpu => 2 },
   "mssql" => { :ip => "192.168.100.12", :mem => 4096, :cpu => 2 },
-  "gitlab" => { :ip => "192.168.100.13", :mem => 2048, :cpu => 2 },
+  "gitlab" => { :ip => "192.168.100.13", :mem => 4096, :cpu => 2 },
 }
 
 Vagrant.configure("2") do |config|
