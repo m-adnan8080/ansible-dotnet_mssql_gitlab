@@ -182,7 +182,3 @@ Gitlab have many other settings ([see official documentation](https://gitlab.com
 *Inside `vars/main.yml`*:
 
     gitlab_external_url: "https://gitlab.example.com/"
-
-## License
-
-MIT / BSD
