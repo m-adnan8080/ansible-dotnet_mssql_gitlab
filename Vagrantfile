@@ -2,9 +2,9 @@
 # vi: set ft=ruby :
 
 cluster = {
-  "iis" => { :ip => "192.168.100.11", :mem => 2048, :cpu => 2 },
-  "db" => { :ip => "192.168.100.12", :mem => 4096, :cpu => 2 },
-  "gitlab" => { :ip => "192.168.100.13", :mem => 4096, :cpu => 2 },
+  "web" => { :ip => "192.168.100.11", :mem => 2048, :cpu => 1 },
+  "db" => { :ip => "192.168.100.12", :mem => 4096, :cpu => 1 },
+  "gitlab" => { :ip => "192.168.100.13", :mem => 4096, :cpu => 1 },
 }
 
 Vagrant.configure("2") do |config|
@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
       cfg.vm.box = "centos/7"
       cfg.vm.provider :virtualbox do |vb, override|
         override.vm.network :private_network, ip: "#{info[:ip]}"
-        override.vm.hostname = hostname + ".local"
+        override.vm.hostname = hostname + ".example.com"
         vb.name = hostname
         vb.customize ["modifyvm", :id, "--memory", info[:mem], "--cpus", info[:cpu], "--hwvirtex", "on"]
       end # end provider
