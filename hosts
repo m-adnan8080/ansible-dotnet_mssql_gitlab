@@ -1,13 +1,14 @@
 [all]
-iis.local ansible_host=192.168.100.11
-db.local ansible_host=192.168.100.12
-gitlab.local ansible_host=192.168.100.13
+web.example.com ansible_host=192.168.100.11
+db.example.com ansible_host=192.168.100.12
+gitlab.example.com ansible_host=192.168.100.13
 
 [db]
-db.local
+db.example.com
 
 [web]
-iis.local
+web.example.com
+gitlab.example.com
 
 [git]
-gitlab.local
+gitlab.example.com
