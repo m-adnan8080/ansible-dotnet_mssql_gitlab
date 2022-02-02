@@ -21,32 +21,32 @@
     - {role: docker, when: CRIO == False and DOCKER == True}
     - {role: crio, when: CRIO == True and DOCKER == False}
 
+# - hosts: db
+#   become: true
+#   vars_files:
+#     - vars.yaml
+#   roles:
+#     - {role: postgresql}
+
 - hosts: db
   become: true
   vars_files:
     - vars.yaml
   roles:
     - {role: postgresql}
-
-# - hosts: db
-#   become: true
-#   vars_files:
-#     - vars.yaml
-#   roles:
-#     - {role: mssql}
-#   tasks:
-#     - name: Wait up to 60 seconds for server to become available after creation
-#       wait_for:
-#         port: 1433
-#         timeout: 60
-#     - name: Create new db
-#       include_role:
-#         name: mssql
-#         tasks_from: new_db
-#     - name: Import database from files directory
-#       include_role:
-#         name: mssql
-#         tasks_from: import_db
+  # tasks:
+  #   - name: Wait up to 60 seconds for server to become available after creation
+  #     wait_for:
+  #       port: 1433
+  #       timeout: 60
+  #   - name: Create new db
+  #     include_role:
+  #       name: mssql
+  #       tasks_from: new_db
+  #   - name: Import database from files directory
+  #     include_role:
+  #       name: mssql
+  #       tasks_from: import_db
 
 # - hosts: git
 #   become: true
